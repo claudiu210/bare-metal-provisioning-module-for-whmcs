@@ -4,10 +4,10 @@
 ###### All you need to get started is to have the Bare Metal module installed on your WHMCS, A http://my.hivelocity.net account, and a credit card on file to order servers.
 ##### This currently only works with the Six template.
 ##### Upload:
-We reccomend uploading the zip file provided directly to the server "bare-metal-provisioning-module-for-whmcs-master.zip" extract it, the resulting extraction has two folders under "bare-metal-provisioning-module-for-whmcs-master/modules/", "addons" and "servers".
+We recommend uploading the "bare-metal-provisioning-module-for-whmcs-master.zip" file using your preferred method (scp, sftp, ftp, via cPanel file manager, etc...) directly to the server, extract it, the resulting extraction has two folders under "bare-metal-provisioning-module-for-whmcs-master/modules/", "addons" and "servers".
 #### 1. Module Installation
 1. Move the contents of "addons" folder to the path of /whmcs/ installation folder. This depends on where you set your WHMCS path ex. "/var/www/html/whmcs/modules/addons/"
-2. Login to WHMCS go to System settings -> Addon and Active the Hivelocity Pricing Tool Module under Addon Modules. If you would like to recieve emails on price changes click the check box next to "Check if you want to receive an email notification about the price change of Hivelocity"
+2. Login to WHMCS go to System settings -> Addon and activate the Hivelocity Pricing Tool Module under Addon Modules. If you would like to recieve emails on price changes click the check box next to "Check if you want to receive an email notification about the price change of Hivelocity"
 #### 2. Server Setup
 Move the contents of "servers" folder to the path of /whmcs/ installation folder. This depends on where you set your WHMCS path ex. "/var/www/html/whmcs/modules/servers/"
 1. Next go to System settings -> Servers 
@@ -21,13 +21,13 @@ Move the contents of "servers" folder to the path of /whmcs/ installation folder
 #### 3a. Create Products/Services
 1. Go to System Settings -> Products and Services.
 2. Click Create a new Group and give it a name.
-3. Select the cart you want, payment gateways and click save.
+3. Select Order Form Template you want and payment gateways then click save.
 4. Click Create a New Product.
 5. On the product creation screen Select Server/VPS, Select the product Group you created from the drop down, and Select the Hivelocity from the Module drop down then click continue.
 6. Make changes as needed to the Product Details tab and click save.
 7. Click the Pricing Tab and tick Recurring. Next tick One Time/Monthly and click save. Make sure to enable one billing peroid or the product will not show up in the pricing tool. I normally just tick one time month and leave it 0.00 and click save. Then later you can mark it up in the Hivelocity pricing tool.
 #### 3b. Product Module configuration
-##### If you do not do these steps in this order you may have issues with your product working correctly.
+##### If you do not do these steps in this order you may have issues with your product working correctly, we can't stress enough how important is to click SAVE at any of the given steps below.
 1. Next go to the module tab and select the Server Group you created earlier from the drop down then click save.
 2. Select the Server under product you want and click save.
 3. Click generate configurable options next to the server you want then click save.
@@ -37,5 +37,6 @@ Move the contents of "servers" folder to the path of /whmcs/ installation folder
 
 You should now have a Bare Metal Server configured and in your store. There are other options under the module setting of the product you can configure including Metric Billing Transfer In and Out or 95% In and Out.
 
-There are also addons which are included on the order form automatically when you generate configurable options. cPanel, WHMCS, Litespeed Web Server, Managed Services, Load Balancing,  Extra Bandwidth, DDOS Protection, Data Migration and Backup & Rapid Restore. All of these addons will be added for purchase when you Generate configurable options. 
-##### This currently only works with the six template.
+There are also addons which are included on the order form automatically when you generate configurable options. cPanel, WHMCS, Litespeed Web Server, Managed Services, Load Balancing,  Extra Bandwidth, DDOS Protection, Data Migration and Backup & Rapid Restore. All of these addons will be added for purchase when you Generate configurable options.
+The Generate Configurable Options creates a generic name for each chosen package, please go to System-Settings>Configurable Options menu, click on Edit to change the name to something descriptive.
+##### These modules currently only work with the six template only.
